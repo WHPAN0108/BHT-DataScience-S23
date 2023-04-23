@@ -7,7 +7,7 @@ Der Kurs findet am Donnerstag von 19:00 bis 21:00 Uhr statt! Die Unterrichtsspra
 Date Topic
 
 * 13.04. [Introduction](https://miro.com/app/board/uXjVO-23Bog=/?share_link_id=260284173459)  | [VIDEO](https://bbb-scalelite.bht-berlin.de/playback/presentation/2.3/0a7bb114d2978053b08ef1a92f446820b08317e9-1681404751269)
-* 20.04. [Linear Algebra (Basics)](https://miro.com/app/board/uXjVPmKtogo=/?share_link_id=527224809592) | [CODE](/linearAlgebra)
+* 20.04. [Linear Algebra (Basics)](https://miro.com/app/board/uXjVPmKtogo=/?share_link_id=527224809592) | [VIDEO](https://bbb-scalelite.bht-berlin.de/playback/presentation/2.3/0a7bb114d2978053b08ef1a92f446820b08317e9-1682009361029)| [CODE](/linearAlgebra)
 * 27.04.  [Basic Python](https://miro.com/app/board/uXjVMdYMdH4=/?share_link_id=963898543783)
 * 04.05.  [Python for DS](https://miro.com/app/board/uXjVO5ML9R0=/?share_link_id=96512781307)
 * 11.05. [R and Julia](https://miro.com/app/board/uXjVO3ukZn8=/?share_link_id=159651251863)
