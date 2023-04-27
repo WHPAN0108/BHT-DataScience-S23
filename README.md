@@ -8,7 +8,7 @@ Date Topic
 
 * 13.04. [Introduction](https://miro.com/app/board/uXjVO-23Bog=/?share_link_id=260284173459)  | [VIDEO](https://bbb-scalelite.bht-berlin.de/playback/presentation/2.3/0a7bb114d2978053b08ef1a92f446820b08317e9-1681404751269)
 * 20.04. [Linear Algebra (Basics)](https://miro.com/app/board/uXjVPmKtogo=/?share_link_id=527224809592) | [VIDEO](https://bbb-scalelite.bht-berlin.de/playback/presentation/2.3/0a7bb114d2978053b08ef1a92f446820b08317e9-1682009361029)| [CODE](/linearAlgebra)
-* 27.04.  [Basic Python](https://miro.com/app/board/uXjVMdYMdH4=/?share_link_id=963898543783) | [CODE](/python)
+* 27.04.  [Basic Python](https://miro.com/app/board/uXjVMdYMdH4=/?share_link_id=963898543783) | [VIDEO](https://bbb-scalelite.bht-berlin.de/playback/presentation/2.3/0a7bb114d2978053b08ef1a92f446820b08317e9-1682614351618) | [CODE](/python)
 * 04.05.  [Python for DS](https://miro.com/app/board/uXjVO5ML9R0=/?share_link_id=96512781307)
 * 11.05. [R and Julia](https://miro.com/app/board/uXjVO3ukZn8=/?share_link_id=159651251863)
 * 18.05. [ML Introduction, Kaggle, ](https://miro.com/app/board/uXjVO19q2PE=/?share_link_id=477884957729)
