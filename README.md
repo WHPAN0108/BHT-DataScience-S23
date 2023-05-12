@@ -10,7 +10,7 @@ Date Topic
 * 20.04. [Linear Algebra (Basics)](https://miro.com/app/board/uXjVPmKtogo=/?share_link_id=527224809592) | [VIDEO](https://bbb-scalelite.bht-berlin.de/playback/presentation/2.3/0a7bb114d2978053b08ef1a92f446820b08317e9-1682009361029)| [CODE](/linearAlgebra)
 * 27.04.  [Basic Python](https://miro.com/app/board/uXjVMdYMdH4=/?share_link_id=963898543783) | [VIDEO](https://bbb-scalelite.bht-berlin.de/playback/presentation/2.3/0a7bb114d2978053b08ef1a92f446820b08317e9-1682614351618) | [CODE](/python)
 * 04.05.  [Python for DS](https://miro.com/app/board/uXjVO5ML9R0=/?share_link_id=96512781307) | [VIDEO](https://bbb-scalelite.bht-berlin.de/playback/presentation/2.3/0a7bb114d2978053b08ef1a92f446820b08317e9-1683219520202) | [CODE](/python-DS)
-* 11.05. [R and Julia](https://miro.com/app/board/uXjVO3ukZn8=/?share_link_id=159651251863)
+* 11.05. [R and Julia](https://miro.com/app/board/uXjVO3ukZn8=/?share_link_id=159651251863) |[VIDEO](https://bbb-scalelite.bht-berlin.de/playback/presentation/2.3/0a7bb114d2978053b08ef1a92f446820b08317e9-1683824257286) | [CODE](/R_learning)
 * 18.05. [ML Introduction, Kaggle, ](https://miro.com/app/board/uXjVO19q2PE=/?share_link_id=477884957729)
 * 25.05. [Data Preparation, Practical Data Cleaning (Trifacta)](https://miro.com/app/board/uXjVOz7P-_o=/?share_link_id=509968372840)
 * 01.06. [Regression + Leading Science Confs](https://miro.com/app/board/uXjVOviVUz0=/?share_link_id=913790249548)
