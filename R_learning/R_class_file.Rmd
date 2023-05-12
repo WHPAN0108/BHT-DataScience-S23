@@ -1,0 +1,110 @@
+---
+title: "R_class"
+output: html_document
+date: "2023-05-07"
+---
+
+## import library
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(dplyr)
+```
+
+## R Markdown
+
+This data frame contains the following columns:
+
+low: indicator of birth weight less than 2.5 kg.
+age: mother's age in years.
+lwt: mother's weight in pounds at last menstrual period.
+race: mother's race (1 = white, 2 = black, 3 = other).
+smoke:smoking status during pregnancy.
+ptl:number of previous premature labours.
+ht:history of hypertension.
+ui:presence of uterine irritability.
+ftv: number of physician visits during the first trimester.
+bwt:birth weight in grams.
+```{r cars}
+library(MASS) # Load MASS for the birthwt data set
+summary(birthwt)
+head(birthwt)
+## Including Plots
+```
+
+```{r}
+library(MASS) # Load MASS for the birthwt data set
+
+# Use smoke as the faceting variable
+ggplot(birthwt, aes(x = bwt)) +
+  geom_histogram() +
+  facet_grid(smoke ~ .)
+## Including Plots
+```
+You can also embed plots, for example:
+
+
+
+```{python}
+a = 1
+print(a)
+```
+
+
+
+```{r}
+# Convert smoke to a factor and reassign new names
+birthwt_mod <- birthwt %>% 
+    mutate(smoke=case_when(smoke == "1" ~ "Smoke", smoke == "0" ~ "No Smoke")) %>%
+    mutate(race=case_when(race == "1"~ "white",race == "2"~ "black", race == "3"~ "other"))
+           
+summary(birthwt_mod)
+head(birthwt_mod)
+
+```
+
+## Scatror plot
+```{r }
+
+ggplot(data=birthwt_mod, aes(x=lwt, y=bwt))+geom_point(aes(color=race))+  geom_smooth(method = lm)
+
+ggplot(data=birthwt_mod, aes(x=lwt, y=bwt))+geom_point(aes(color=race))+  geom_smooth()
+
+```
+
+## histogram
+```{r }
+
+ggplot(birthwt_mod, aes(x = bwt, fill = smoke)) +
+  geom_histogram(position = "identity", alpha = 0.4)
+
+ggplot(birthwt_mod, aes(x = bwt, fill = race)) +
+  geom_histogram(position = "identity", alpha = 0.6)
+```
+
+## boxplot
+```{r }
+
+ggplot(birthwt_mod, aes(y = bwt,  x= smoke, fill = smoke)) +
+  geom_boxplot()
+
+```
+```{r }
+library(ggstatsplot)
+ggbetweenstats(
+  data  = birthwt_mod,
+  x     = smoke,
+  y     = bwt,
+  title = "Distribution of bwt"
+)
+
+```
+
+
+## T-test
+```{r }
+t.test(bwt~smoke, data = birthwt_mod)
+
+```
+pvalue = 0.007 < 0.05 , so it is significant
