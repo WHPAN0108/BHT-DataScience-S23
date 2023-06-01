@@ -1,4 +1,4 @@
-Participant_ID,Sex,Age_at_recruitment,Smoking_status__Instance_0,Body_mass_index_.BMI.__Instance_0,Disease
+Participant_ID,Sex,Age,Smoking_status,BMI,Disease
 1189380,Female,52,Never,27.8159,1
 5204198,Female,48,Previous,21.2515,2
 5261077,Male,69,Previous,31.5537,2
