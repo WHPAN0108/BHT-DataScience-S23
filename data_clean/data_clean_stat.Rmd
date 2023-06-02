@@ -1,0 +1,111 @@
+---
+title: "Data_clean"
+author: "We-Hung Pan"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(tidyr)
+library(datarium)
+library(ggpubr)
+
+```
+
+## Data Clean
+
+### NA replace
+
+```{r}
+df <- tibble(x = c(1, 2, NA), y = c("a", NA, "b"))
+df %>% replace_na(list(x = 0, y = "unknown"))
+```
+
+### Filter
+
+```{r}
+starwars %>% filter(skin_color == "light", eye_color == "brown")
+```
+
+### Date Conversion
+
+```{r}
+# Create a sample dataframe
+df <- data.frame(
+  date_column = c("01-05-2023", "15-06-2023", "31-07-2023"),
+  stringsAsFactors = FALSE
+)
+
+# Convert the date column to a date format
+df$date_column <- as.Date(df$date_column, format = "%d-%m-%Y")
+
+# Print the updated dataframe
+print(df)
+
+# date add
+df %>% mutate(next_date =date_column + 1)
+
+```
+### Group by
+```{r}
+mtcars %>% group_by(cyl) %>% summarise(
+  disp = mean(disp),
+  hp = mean(hp),
+  count = n()
+)
+```
+# Statistics
+
+## T test
+```{r}
+data("genderweight", package = "datarium")
+
+genderweight %>%
+  group_by(group) %>%
+  get_summary_stats(weight, type = "mean_sd")
+
+res <- t.test(weight ~ group, data = genderweight)
+summary(res)
+
+#ggbetweenstats(
+#  data  = genderweight,
+#  x     = group,
+#  y     = weight,
+#)
+```
+
+
+## ANOVA
+
+```{r}
+data(iris)
+anova_graph <- ggplot(data = iris, mapping = aes(x = Species, y = Sepal.Length)) + geom_boxplot()
+anova_graph
+
+anova_model <- aov(data = iris, formula = Sepal.Length ~ Species)
+summary(anova_model)
+
+#ggbetweenstats(
+#  data  = iris,
+#  x     = Species,
+#  y     = Sepal.Length,
+#  title = "Distribution of sepal length across Iris species"
+#)
+```
+
+## Chi-square test
+```{r}
+
+data_frame <- read.csv("https://goo.gl/j6lRXD")  #Reading CSV
+table(data_frame$treatment, data_frame$improvement)
+chisq.test(data_frame$treatment, data_frame$improvement, correct=FALSE)
+```
+
+```{r}
+
+M <- as.table(rbind(c(762, 327, 468), c(484, 239, 477)))
+dimnames(M) <- list(gender = c("F", "M"),
+                    party = c("Democrat","Independent", "Republican"))
+(Xsq <- chisq.test(M))  # Prints test summary
+```
