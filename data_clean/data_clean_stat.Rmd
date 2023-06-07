@@ -65,8 +65,10 @@ genderweight %>%
   group_by(group) %>%
   get_summary_stats(weight, type = "mean_sd")
 
-res <- t.test(weight ~ group, data = genderweight)
-summary(res)
+boxplot(weight~group,data =genderweight)
+
+res <- t.test(weight ~ group, data = genderweight,alternative ="less")
+res
 
 #ggbetweenstats(
 #  data  = genderweight,
@@ -105,6 +107,7 @@ chisq.test(data_frame$treatment, data_frame$improvement, correct=FALSE)
 ```{r}
 
 M <- as.table(rbind(c(762, 327, 468), c(484, 239, 477)))
+M
 dimnames(M) <- list(gender = c("F", "M"),
                     party = c("Democrat","Independent", "Republican"))
 (Xsq <- chisq.test(M))  # Prints test summary
